@@ -1,1 +1,92 @@
 ## Ruby on rails + Authentication + Docker
+
+### Install mongoid: add gem 'mongoid' to Gemfile
+
+```js
+bundle install
+```
+
+### Generate the default Mongoid configuration
+
+```js
+bin/rails g mongoid:config
+```
+
+### Create model User
+
+```js
+bin/rails g scaffold User username:string email:string password:string
+```
+
+### List routes
+
+```js
+rails routes
+```
+
+### Status code
+
+Code Symbol Message Category
+100 :continue Continue Informational
+101 :switching_protocols Switching Protocols Informational
+102 :processing Processing Informational
+103 :early_hints Early Hints Informational
+200 :ok Ok Success
+201 :created Created Success
+202 :accepted Accepted Success
+203 :non_authoritative_information Non Authoritative Information Success
+204 :no_content No Content Success
+205 :reset_content Reset Content Success
+206 :partial_content Partial Content Success
+207 :multi_status Multi Status Success
+208 :already_reported Already Reported Success
+226 :im_used IM Used Success
+300 :multiple_choices Multiple Choices Redirection
+301 :moved_permanently Moved Permanently Redirection
+302 :found Found Redirection
+303 :see_other See Other Redirection
+304 :not_modified Not Modified Redirection
+305 :use_proxy Use Proxy Redirection
+306 :reserved Reserved Redirection
+307 :temporary_redirect Temporary Redirect Redirection
+308 :permanent_redirect Permanent Redirect Redirection
+400 :bad_request Bad Request Client Error
+401 :unauthorized Unauthorized Client Error
+402 :payment_required Payment Required Client Error
+403 :forbidden Forbidden Client Error
+404 :not_found Not Found Client Error
+405 :method_not_allowed Method Not Allowed Client Error
+406 :not_acceptable Not Acceptable Client Error
+407 :proxy_authentication_required Proxy Authentication Required Client Error
+408 :request_timeout Request Timeout Client Error
+409 :conflict Conflict Client Error
+410 :gone Gone Client Error
+411 :length_required Length Required Client Error
+412 :precondition_failed Precondition Failed Client Error
+413 :request_entity_too_large Request Entity Too Large Client Error
+414 :request_uri_too_long Request Uri Too Long Client Error
+415 :unsupported_media_type Unsupported Media Type Client Error
+416 :requested_range_not_satisfiable Requested Range Not Satisfiable Client Error
+417 :expectation_failed Expectation Failed Client Error
+421 :misdirected_request Misdirected Request Client Error
+422 :unprocessable_entity Unprocessable Entity Client Error
+423 :locked Locked Client Error
+424 :failed_dependency Failed Dependency Client Error
+425 :too_early Too Early Client Error
+426 :upgrade_required Upgrade Required Client Error
+428 :precondition_required Precondition Required Client Error
+429 :too_many_requests Too Many Requests Client Error
+431 :request_header_fields_too_large Request Header Fields Too Large Client Error
+451 :unavailable_for_legal_reasons Unavailable for Legal Reasons Client Error
+500 :internal_server_error Internal Server Error Server Error
+501 :not_implemented Not Implemented Server Error
+502 :bad_gateway Bad Gateway Server Error
+503 :service_unavailable Service Unavailable Server Error
+504 :gateway_timeout Gateway Timeout Server Error
+505 :http_version_not_supported Http Version Not Supported Server Error
+506 :variant_also_negotiates Variant Also Negotiates Server Error
+507 :insufficient_storage Insufficient Storage Server Error
+508 :loop_detected Loop Detected Server Error
+509 :bandwidth_limit_exceeded Bandwidth Limit Exceeded Server Error
+510 :not_extended Not Extended Server Error
+511 :network_authentication_required Network Authentication Required Server Error
