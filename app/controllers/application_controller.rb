@@ -5,6 +5,7 @@ class ApplicationController < ActionController::API
     def decode_token
         # Authorization = Bearer token
         auth_header = request.headers['Authorization']
+        puts auth_header
         if auth_header
             token = auth_header.split(" ")[1]
             begin
